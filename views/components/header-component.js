@@ -1,4 +1,4 @@
-export default function headerComponent() {
+function init() {
   class Header extends HTMLElement {
     constructor() {
       super();
@@ -7,14 +7,16 @@ export default function headerComponent() {
     connectedCallback() {
       this.innerHTML = `
       <header class="header">
-        <div class="header__logo">Library</div>
-        <nav class="header__nav">
-          <ul>
-            <li><a href="#accordion">Accordion</a></li>
-            <li><a href="#buttons">Buttons</a></li>
-            <li><a href="#forms">Forms</a></li>
-            <li><a href="#masonry">Masonry</a></li>
-            <li><a href="#modal">Modal</a></li>
+        <div class="logo">Library</div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link nav__link--active" href="#accordion">Accordion</a></li>
+            <li><a class="nav__link" href="#buttons">Buttons</a></li>
+            <li><a class="nav__link" href="#forms">Forms</a></li>
+            <li><a class="nav__link" href="#masonry">Masonry</a></li>
+            <li><a class="nav__link" href="#modal">Modal</a></li>
+            <li><a class="nav__link" href="#navbar">Navbar</a></li>
+            <li><a class="nav__link" href="#tabs">Tabs</a></li>
           </ul>
         </nav>
       </header>
@@ -24,3 +26,5 @@ export default function headerComponent() {
 
   customElements.define('header-component', Header);
 };
+
+export default { init }

@@ -1,0 +1,27 @@
+.accordion {
+  width: 100%;
+  max-width: 450px;
+}
+
+.accordion[enhanced] {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.accordion__pane {
+
+}
+
+.accordion__btn {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: darkslategrey;
+  color: white;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}

@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background-secondary);
+  min-width: 10rem;
+  padding: 2rem;
+}
+
+.logo {
+  font-size: var(--18px);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.nav {
+  
+}
+
+.nav__link {
+  text-decoration: none;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+.nav__link--active {
+  color: blue;
+}
