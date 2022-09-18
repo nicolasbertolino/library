@@ -66,11 +66,11 @@ details > summary {
 :root {
   --color-primary: darkslategrey;
   --color-secondary: mediumpurple;
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #f2f2f2;
-  --color-text-primary: #222222;
-  --color-text-secondary: #9c9c9c;
-  --color-text-opposite: #ffffff;
+  --color-background-primary: white;
+  --color-background-secondary: lightgrey;
+  --color-text-primary: black;
+  --color-text-secondary: grey;
+  --color-text-opposite: white;
 }
 
 :root {
@@ -92,28 +92,46 @@ details > summary {
 }
 
 /* Components */
-.accordion {
-  width: 100%;
-  max-width: 450px;
-}
-
-.accordion[enhanced] {
-  max-height: 600px;
-  overflow: hidden;
+.accordion__panel {
+  background: lightgrey;
+  margin: 0.5rem 0;
 }
 
 .accordion__btn {
+  position: relative;
   width: 100%;
-  height: 30px;
-  line-height: 30px;
+  padding: 0.5rem;
+  text-align: left;
   background-color: darkslategrey;
   color: white;
+}
+.accordion__btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  background-image: url("../../images/icons/chevron-down.svg");
+  transform: translateY(-50%) rotate(0);
+  transition: transform 0.3s;
+}
+
+.accordion__btn--active::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .accordion__content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out, visibility 0.3s ease-out;
+}
+.accordion__content[aria-hidden=true] {
+  visibility: hidden;
+}
+
+.accordion__container {
+  padding: 0.5rem;
 }
 
 .header {

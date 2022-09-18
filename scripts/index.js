@@ -1,8 +1,10 @@
 /* Components */
 import headerComponent from "../views/components/header-component.js";
+import accordionHtmlComponent from "../views/components/accordion-html-component.js";
+import accordionJsComponent from "../views/components/accordion-js-component.js";
 
 /* Components Logic */
-import accordion from "./components/accordion.js";
+import accordionJs from "./components/accordion-js.js";
 import header from "./components/header.js";
 
 /* Main */
@@ -15,9 +17,10 @@ if (document.readyState === "loading") {
 }
 
 function init() {
-  accordion.init();
-  header.init();
+  accordionHtmlComponent.init();
+  accordionJsComponent.init();
+  accordionJs.init();
   headerComponent.init();
+  header.init();
   main.init();
 }
-
