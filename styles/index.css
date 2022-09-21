@@ -20,11 +20,8 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-* {
-  margin: 0;
-}
-
 body {
+  margin: 0;
   background-color: var(--color-background-primary);
   font-family: var(--font-family-primary);
   color: var(--color-text-primary);
@@ -65,7 +62,7 @@ details > summary {
 
 :root {
   --color-primary: darkslategrey;
-  --color-secondary: mediumpurple;
+  --color-secondary: mediumaquamarine;
   --color-background-primary: white;
   --color-background-secondary: lightgrey;
   --color-text-primary: black;
@@ -159,6 +156,60 @@ details > summary {
 
 .nav__link--active {
   color: blue;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(22, 22, 22, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal__wrapper--visible {
+  visibility: inherit;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: white;
+}
+
+.modal__cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.modal__cross:hover {
+  background-color: lightgrey;
+}
+.modal__cross svg {
+  vertical-align: middle;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.modal__btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: lightgray;
 }
 
 /* Main */

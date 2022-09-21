@@ -19,11 +19,8 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-* {
-  margin: 0;
-}
-
 body {
+  margin: 0;
   background-color: var(--color-background-primary);
   font-family: var(--font-family-primary);
   color: var(--color-text-primary);

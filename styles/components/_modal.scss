@@ -1,0 +1,57 @@
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(22, 22, 22, .5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal__wrapper--visible {
+  visibility: inherit;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: white;
+}
+
+.modal__cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgrey;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.modal__title {}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.modal__btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: lightgray;
+}

@@ -8,11 +8,11 @@ function init() {
       this.innerHTML = `
       <details>
         <summary>Lorem ipsum dolor</summary>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vero nesciunt impedit eaque nisi sequi inventore doloremque praesentium in, aliquid illum, reprehenderit, ad sunt. Aliquid ratione dignissimos iure natus nam!
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vero nesciunt <a href="#">ipsa soluta maiores</a> impedit eaque nisi sequi inventore doloremque praesentium in, aliquid illum, reprehenderit, ad sunt. Aliquid ratione dignissimos iure natus nam!</p>
       </details>
       <details>
         <summary>Accusantium maiores</summary>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem veniam iste, dolores impedit neque officia atque ducimus, beatae similique quo fugit voluptatem, reprehenderit libero non hic quae consequatur! Eaque!
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quidem veniam iste, dolores impedit neque officia atque ducimus, beatae similique quo fugit voluptatem, reprehenderit libero non hic quae consequatur! Eaque!</p>
       </details>
     `;
     }
