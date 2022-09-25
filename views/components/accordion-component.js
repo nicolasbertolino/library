@@ -38,7 +38,7 @@ function init() {
     }
   }
 
-  customElements.define('accordion-js-component', Accordion);
+  customElements.define('accordion-component', Accordion);
 };
 
 export default { init }

@@ -1,0 +1,20 @@
+.dropdown-default {
+  background-color: lightgray;
+}
+
+.dropdown-default__menu {
+  position: relative;
+  padding: 0.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    // right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icons/chevron-down.svg");
+    transform: translateY(-50%) rotate(0);
+    transition: transform 0.3s;
+  }
+}

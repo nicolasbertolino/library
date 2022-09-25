@@ -1,11 +1,12 @@
 /* Components */
-import accordionHtmlComponent from '../views/components/accordion-html-component.js';
-import accordionJsComponent from '../views/components/accordion-js-component.js';
+import accordionComponent from '../views/components/accordion-component.js';
+import dropdownDefaultComponent from '../views/components/dropdown-default-component.js';
 import headerComponent from '../views/components/header-component.js';
 import modalComponent from '../views/components/modal-component.js';
 
 /* Components Logic */
-import accordionJs from './components/accordion-js.js';
+import accordion from './components/accordion.js';
+import dropdownDefault from './components/dropdown-default.js';
 import header from './components/header.js';
 import modal from './components/modal.js'
 
@@ -19,9 +20,10 @@ if (document.readyState === 'loading') {
 }
 
 function init() {
-  accordionHtmlComponent.init();
-  accordionJsComponent.init();
-  accordionJs.init();
+  accordionComponent.init();
+  accordion.init();
+  dropdownDefaultComponent.init();
+  dropdownDefault.init();
   headerComponent.init();
   header.init();
   main.init();

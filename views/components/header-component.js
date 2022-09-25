@@ -11,7 +11,7 @@ function init() {
         <nav class="nav">
           <ul class="nav__list">
             <li><a class="nav__link nav__link--active" href="#accordion">Accordion</a></li>
-            <li><a class="nav__link" href="#buttons">Buttons</a></li>
+            <li><a class="nav__link" href="#dropdowns">Dropdowns</a></li>
             <li><a class="nav__link" href="#forms">Forms</a></li>
             <li><a class="nav__link" href="#masonry">Masonry</a></li>
             <li><a class="nav__link" href="#modal">Modal</a></li>
@@ -19,6 +19,7 @@ function init() {
             <li><a class="nav__link" href="#tabs">Tabs</a></li>
           </ul>
         </nav>
+        <a target="_blank" href="https://github.com/nicolasbertolino/library">Github</a>
       </header>
     `;
     }

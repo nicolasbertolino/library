@@ -21,6 +21,7 @@
     width: 18px;
     height: 18px;
     background-image: url("../../images/icons/chevron-down.svg");
+    filter: brightness(0) invert(1);
     transform: translateY(-50%) rotate(0);
     transition: transform 0.3s;
   }

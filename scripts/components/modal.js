@@ -5,7 +5,6 @@ function init() {
 
   modalOpener.addEventListener('click', () => {
     openModal();
-    trapFocus();
   });
 
   modalClosers.forEach(modalCloser => {
@@ -15,13 +14,16 @@ function init() {
   });
 
   function openModal() {
+    modalOpener.blur();
     modal.classList.add('modal__wrapper--visible');
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', handleEscape);
     modal.addEventListener('click', handleOutsideClick);
+    handleFocus();
   }
 
   function closeModal() {
+    modalOpener.focus();
     modal.classList.remove('modal__wrapper--visible');
     document.body.style.overflow = 'initial';
     document.removeEventListener('keydown', handleEscape);
@@ -39,10 +41,12 @@ function init() {
     }
   }
 
-  function trapFocus() {
+  function handleFocus() {
     let focusableEls = modal.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
     let firstFocusableEl = focusableEls[0];
     let lastFocusableEl = focusableEls[focusableEls.length - 1];
+
+    setTimeout(() => firstFocusableEl.focus(), 1)
 
     modal.addEventListener('keydown', function (e) {
       let isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
@@ -62,7 +66,6 @@ function init() {
       }
     });
   }
-
 }
 
 export default { init }

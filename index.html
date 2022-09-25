@@ -15,31 +15,24 @@
   <main role="main" class="main">
     <section id="accordion">
       <h2>Accordion</h2>
-      <h3>1. HTML accordion</h3>
-      <accordion-html-component></accordion-html-component>
-      <h3>2. JS accordion</h3>
-      <accordion-js-component></accordion-js-component>
-    </section>
-    <section id="buttons">
-      <h2>Buttons</h2>
-      <p>Dolorem repudiandae, accusantium distinctio explicabo obcaecati amet? Dolorum ratione maxime fugiat quod laboriosam deserunt, minima ab esse quam, iusto ex et officia.</p>
+      <accordion-component></accordion-js-component>
+      </section>
+      <section id="dropdowns">
+        <h2>Dropdowns</h2>
+        <h3>1. Default</h3>
+        <div class="dropdown-default">
+          <button class="dropdown-default__menu">
+            Dropdown menu options
+          </button>
+        </div>
+      <dropdown-default-component></dropdown-default-component>
+      <h3>2. Combo box</h3>
+      <h3>3. Multiselect</h3>
+      <h3>4. Filterable multiselect</h3>
     </section>
     <section id="modal">
       <h2>Modal</h2>
       <modal-component></modal-component>
-      <div class="modal__wrapper" data-modal>
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal__title">
-          <button class="modal__cross" data-modal-close>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-          </button>
-          <h3 id="modal__title">Modal title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="#">At pariatur eveniet</a> hic, doloremque ullam consequuntur eaque neque maxime! Inventore laborum ducimus facere, maxime voluptatem expedita animi quidem dolores perspiciatis perferendis.</p>
-          <div class="modal__actions">
-            <button class="modal__btn" data-modal-close>Cancel</button>
-            <button class="modal__btn">Save</button>
-          </div>
-        </div>
-      </div>
     </section>
     <section id="navbar">
       <h2>Navbar</h2>
